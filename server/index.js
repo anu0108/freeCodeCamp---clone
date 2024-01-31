@@ -18,10 +18,6 @@ app.use(
 
 app.use("/", authRoute);
 
-// app.get("/", (req, res) => {
-//   res.send("Hello, this is the root route!");
-// });
-
 mongoose.connect(
   `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hbqnya2.mongodb.net/freeCodeCamp`
 );
@@ -29,6 +25,3 @@ mongoose.connect(
 app.listen(3001, () => {
   console.log("Server started on PORT 3001");
 });
-
-// anuragwadhwa786
-// MY61aLIAohATOzW3

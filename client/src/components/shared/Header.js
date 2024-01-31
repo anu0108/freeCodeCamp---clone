@@ -1,25 +1,10 @@
 import React from "react";
 import logo from "../../assets/fcc_primary_large.svg";
 import { Link } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import { useGetUserID } from "../../hooks/useGetUserID";
+
 import { LuSearch } from "react-icons/lu";
 
 const Header = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [_, removeCookies] = useCookies(["access_token"]);
-  const userID = useGetUserID();
-  // eslint-disable-next-line no-unused-vars
-  const handleLogout = () => {
-    if (userID) {
-      removeCookies("access_token");
-
-      window.localStorage.removeItem("userID");
-
-      alert("User Logged out successfully!");
-      window.location.href = "/login";
-    }
-  };
   return (
     <nav className="flex justify-between bg-[#0a0a23] text-white px-10">
       <div className="hidden items-center lg:flex lg:flex-row lg:justify-end  ">
@@ -33,7 +18,6 @@ const Header = () => {
             placeholder="Search Courses"
           />
         </div>
-        {/* <Location /> */}
       </div>
       <Link to="/">
         <img
@@ -49,7 +33,6 @@ const Header = () => {
             Sign In
           </button>
         </Link>
-        {/* <Link onClick={handleLogout}>Logout</Link> */}
       </div>
     </nav>
   );

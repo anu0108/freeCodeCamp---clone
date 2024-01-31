@@ -59,20 +59,22 @@ const Home = () => {
     </>
   ) : (
     <div className=" flex flex-col w-full min-h-screen">
-      <div className="w-3/6 flex flex-col gap-10 mx-auto mt-20">
-        <p className="text-indigo-950 font-bold text-4xl">
+      <div className="w-5/6 lg:w-4/6 xl:w-3/6 flex flex-col gap-8 sm:gap-10 mx-auto mt-14 sm:mt-20">
+        <p className="text-indigo-950 font-bold text-3xl sm:text-4xl">
           Learn to code — for free.
         </p>
-        <p className="text-indigo-950 font-bold text-4xl">Build projects.</p>
-        <p className="text-indigo-950 font-bold text-4xl">
+        <p className="text-indigo-950 font-bold text-3xl sm:text-4xl">
+          Build projects.
+        </p>
+        <p className="text-indigo-950 font-bold text-3xl sm:text-4xl">
           Earn certifications.
         </p>
         <div>
-          <p className="text-indigo-950 font-medium text-2xl">
+          <p className="text-indigo-950 font-medium text-xl sm:text-2xl">
             Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten
             jobs at tech companies including:
           </p>
-          <div className="flex mt-4 items-center gap-28">
+          <div className="flex mt-4 items-center gap-14 sm:gap-24 lg:gap-28">
             <FaApple className="text-gray-600 h-16 w-16" />
             <FaGoogle className="text-gray-600 h-14 w-14 mt-1" />
             <SiMicrosoft className="text-gray-600 h-14 w-14 mt-1" />
@@ -80,7 +82,7 @@ const Home = () => {
             <FaAmazon className="text-gray-600 h-14 w-14 mt-1" />
           </div>
         </div>
-        <button className="bg-yellow-500 px-32 py-4 mx-auto rounded">
+        <button className="bg-yellow-500 hover:bg-yellow-600 px-16 sm:px-32 py-4 mx-auto rounded">
           <p className="font-semibold text-lg">Get Started(it's free)</p>
         </button>
       </div>
