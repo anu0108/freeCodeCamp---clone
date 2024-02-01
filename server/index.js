@@ -3,6 +3,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const authRoute = require("./routes/Route");
+// const session = require("express-session");
+// const passport = require("passport");
+// const UserModel = require("./models/Users");
+// const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 require("dotenv").config();
 
 const app = express();

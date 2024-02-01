@@ -42,6 +42,7 @@ const Login = () => {
   return (
     <div className="w-9/12 md:w-5/12 mx-auto flex flex-col gap-10 border border-gray-900 justify-center items-center mt-20 py-5 rounded">
       <p className="text-lg">Login to freeCodeCamp</p>
+
       <form
         className="flex flex-col gap-10 w-11/12 md:w-5/6 lg:w-2/3 xl:w-1/2"
         onSubmit={handleSubmit}

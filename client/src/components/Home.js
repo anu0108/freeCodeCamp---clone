@@ -7,6 +7,7 @@ import { FaAmazon } from "react-icons/fa";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
@@ -23,7 +24,7 @@ const Home = () => {
         );
 
         setCourses(response.data);
-        console.log(response.data);
+        // console.log(response.data);
       } catch (err) {
         console.error(err);
       }
@@ -82,9 +83,13 @@ const Home = () => {
             <FaAmazon className="text-gray-600 h-14 w-14 mt-1" />
           </div>
         </div>
-        <button className="bg-yellow-500 hover:bg-yellow-600 px-16 sm:px-32 py-4 mx-auto rounded">
-          <p className="font-semibold text-lg">Get Started(it's free)</p>
-        </button>
+        <Link to="/login">
+          <div className="flex justify-center items-center">
+            <button className="bg-yellow-500 hover:bg-yellow-600 px-16 sm:px-32 py-4 mx-auto rounded">
+              <p className="font-semibold text-lg">Get Started(it's free)</p>
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );
